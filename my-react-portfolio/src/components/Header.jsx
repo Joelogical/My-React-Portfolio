@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import Navigation from './Navigation';
 
 const Header = () => {
   return (
     <header>
-      <h1>Developer's Name</h1>
+      <h1>Joel Smith</h1>
       <Navigation />
     </header>
   );

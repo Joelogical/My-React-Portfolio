@@ -1,20 +1,19 @@
-// filepath: src/pages/Portfolio.jsx
 import React from 'react';
 import Project from '../components/Project';
 
 const projects = [
   {
-    title: 'Project 1',
-    image: 'path/to/image1.jpg',
+    title: 'Employee Tracker CMS',
+    image: 'src/assets/images/github.jpg',
     deployedLink: 'https://deployed-link1.com',
-    githubLink: 'https://github.com/user/project1'
+    githubLink: 'https://github.com/Joelogical/Employee_Tracker_CMS.git'
   },
   // Add more projects here
 ];
 
 const Portfolio = () => {
   return (
-    <div>
+    <div className="container">
       <h2>Portfolio</h2>
       <div className="projects">
         {projects.map((project, index) => (

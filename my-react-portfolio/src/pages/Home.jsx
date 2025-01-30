@@ -1,11 +1,10 @@
-// filepath: src/pages/Home.jsx
 import React from 'react';
 
 const Home = () => {
   return (
-    <div>
+    <div className="container">
       <h2>Welcome to My Portfolio</h2>
-      <p>This is the home page.</p>
+      <p>Feel free to navigate here to see my resume, read a little about me, and reach out with any questions or inquiries. Thanks! 😊</p>
     </div>
   );
 };

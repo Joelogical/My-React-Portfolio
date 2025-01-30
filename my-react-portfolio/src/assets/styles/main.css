@@ -1,8 +1,10 @@
-/* filepath: src/assets/styles/main.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   header, footer {
@@ -15,11 +17,13 @@ body {
   nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   nav ul li {
-    display: inline;
-    margin: 0 1em;
+    margin: 0.5em 1em;
   }
   
   nav ul li a {
@@ -33,11 +37,27 @@ body {
   }
   
   main {
-    padding: 2em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
   }
   
   section {
+    width: 100%;
     margin-bottom: 2em;
+    text-align: center;
+    word-wrap: break-word; /* Ensure text wraps within the container */
   }
   
   .avatar {
@@ -49,7 +69,128 @@ body {
   }
   
   .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  
+  .project {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .project img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .project h3 {
+    margin-top: 0;
+  }
+  
+  .project p {
+    margin: 0.5em 0 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  
+  form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  form label {
+    margin-bottom: 0.5em;
+  }
+  
+  form input, form textarea {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  form button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.5em;
+  }
+  
+  #resume a {
+    display: block;
+    margin-bottom: 1em;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #resume a:hover {
+    text-decoration: underline;
+  }
+  
+  #resume ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #resume ul li {
+    margin-bottom: 0.5em;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+  
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries for Larger Screens */
+  @media (min-width: 768px) {
+    .projects {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .project {
+      flex: 1 1 calc(33.333% - 1em);
+      max-width: calc(33.333% - 1em);
+    }
+  
+    main {
+      padding: 2em;
+    }
   }

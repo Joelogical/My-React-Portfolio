@@ -1,4 +1,3 @@
-// filepath: src/pages/Contact.jsx
 import React, { useState } from 'react';
 
 const Contact = () => {
@@ -38,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Contact</h2>
       <form>
         <div>
